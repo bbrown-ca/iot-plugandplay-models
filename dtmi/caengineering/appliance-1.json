@@ -1,0 +1,213 @@
+{
+  "@id": "dtmi:caengineering:appliance;1",
+  "@type": "Interface",
+  "contents": [
+    {
+      "@id": "dtmi:caengineering:appliance:manufacturer;1",
+      "@type": "Property",
+      "displayName": {
+        "en": "Manufacturer"
+      },
+      "name": "manufacturer",
+      "schema": "string",
+      "writable": false
+    },
+    {
+      "@id": "dtmi:caengineering:appliance:model;1",
+      "@type": "Property",
+      "displayName": {
+        "en": "Model"
+      },
+      "name": "model",
+      "schema": "string",
+      "writable": false
+    },
+    {
+      "@id": "dtmi:caengineering:appliance:fwversion;1",
+      "@type": "Property",
+      "description": {
+        "en": "Application Firmware Version"
+      },
+      "displayName": {
+        "en": "Firmware Version"
+      },
+      "name": "fwversion",
+      "schema": "string",
+      "writable": false
+    },
+    {
+      "@id": "dtmi:caengineering:appliance:builddate;1",
+      "@type": "Property",
+      "description": {
+        "en": "Build Date/Time of Application Firmware"
+      },
+      "displayName": {
+        "en": "Firmware Build Date"
+      },
+      "name": "builddate",
+      "schema": "string",
+      "writable": false
+    },
+    {
+      "@id": "dtmi:caengineering:appliance:macaddr;1",
+      "@type": "Property",
+      "description": {
+        "en": "Mac Address of Network Interface"
+      },
+      "displayName": {
+        "en": "MAC Address"
+      },
+      "name": "macaddr",
+      "schema": "string",
+      "writable": false
+    },
+    {
+      "@id": "dtmi:caengineering:appliance:wififreq_prop;1",
+      "@type": [
+        "Property",
+        "Frequency"
+      ],
+      "description": {
+        "en": "WiFi Channel in MHz"
+      },
+      "displayName": {
+        "en": "WiFi Frequency (Prop)"
+      },
+      "name": "wififreq_prop",
+      "schema": "integer",
+      "unit": "megahertz",
+      "writable": false
+    },
+    {
+      "@id": "dtmi:caengineering:appliance:ssid;1",
+      "@type": "Property",
+      "description": {
+        "en": "SSID of Connected WiFi Network"
+      },
+      "displayName": {
+        "en": "SSID"
+      },
+      "name": "ssid",
+      "schema": "string",
+      "writable": false
+    },
+    {
+      "@id": "dtmi:caengineering:appliance:bssid;1",
+      "@type": "Property",
+      "description": {
+        "en": "BSSID of Connected AP"
+      },
+      "displayName": {
+        "en": "BSSID"
+      },
+      "name": "bssid",
+      "schema": "string",
+      "writable": false
+    },
+    {
+      "@id": "dtmi:caengineering:appliance:jsoncmd;1",
+      "@type": "Command",
+      "commandType": "synchronous",
+      "description": {
+        "en": "Send a Direct Method Command"
+      },
+      "displayName": {
+        "en": "Direct Method"
+      },
+      "name": "jsoncmd",
+      "request": {
+        "@type": "CommandPayload",
+        "displayName": {
+          "en": "Commands"
+        },
+        "name": "jsoncmd",
+        "schema": {
+          "@type": "Object",
+          "displayName": {
+            "en": "Object"
+          },
+          "fields": [
+            {
+              "displayName": {
+                "en": "Set Mode"
+              },
+              "name": "setmode",
+              "schema": "integer"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "@id": "dtmi:caengineering:appliance:mode;1",
+      "@type": "Telemetry",
+      "description": {
+        "en": "Appliance Mode"
+      },
+      "displayName": {
+        "en": "Mode"
+      },
+      "name": "mode",
+      "schema": "integer"
+    },
+    {
+      "@id": "dtmi:caengineering:appliance:rssi;1",
+      "@type": "Telemetry",
+      "description": {
+        "en": "Last Received RSSI"
+      },
+      "displayName": {
+        "en": "RSSI"
+      },
+      "name": "rssi",
+      "schema": "integer"
+    },
+    {
+      "@id": "dtmi:caengineering:appliance:wififreq;1",
+      "@type": [
+        "Telemetry",
+        "Frequency"
+      ],
+      "description": {
+        "en": "WiFi Frequency in MHz"
+      },
+      "displayName": {
+        "en": "WiFi Frequency"
+      },
+      "name": "wififreq",
+      "schema": "integer",
+      "unit": "megahertz"
+    },
+    {
+      "@id": "dtmi:caengineering:appliance:ipaddr;1",
+      "@type": "Telemetry",
+      "description": {
+        "en": "Current IP Address"
+      },
+      "displayName": {
+        "en": "IP Address"
+      },
+      "name": "ipaddr",
+      "schema": "string"
+    },
+    {
+      "@id": "dtmi:caengineering:appliance:modename;1",
+      "@type": "Telemetry",
+      "description": {
+        "en": "Mode Name"
+      },
+      "displayName": {
+        "en": "Mode Name"
+      },
+      "name": "modename",
+      "schema": "string"
+    }
+  ],
+  "displayName": {
+    "en": "Appliance"
+  },
+  "@context": [
+    "dtmi:iotcentral:context;2",
+    "dtmi:dtdl:context;2"
+  ]
+}
